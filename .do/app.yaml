@@ -6,3 +6,4 @@ static_sites:
       deploy_on_push: true
       repo: ocean/good-first-issue
     name: good-first-issue
+    output_dir: public
