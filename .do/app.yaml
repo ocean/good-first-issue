@@ -1,4 +1,5 @@
 name: good-first-issue
+region: fra
 static_sites:
   - dockerfile_path: Dockerfile
     github:
@@ -6,4 +7,4 @@ static_sites:
       deploy_on_push: true
       repo: ocean/good-first-issue
     name: good-first-issue
-    output_dir: ./public
+    output_dir: /public
