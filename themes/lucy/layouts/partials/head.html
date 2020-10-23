@@ -50,14 +50,14 @@
   {{ else }} {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
   <link
     rel="stylesheet"
-    href="{{ $style.Permalink }}"
+    href="{{ $style.RelPermalink }}"
     integrity="{{ $style.Data.Integrity }}"
   />
   {{ end }}
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Vollkorn:600,600i&display=swap" rel="stylesheet">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="image_src" type="image/jpeg" href="/images/meta.png">
-  
+
   <!-- Plausible -->
   <script async defer data-domain="goodfirstissue.dev" src="https://plausible.io/js/plausible.js"></script>
 </head>
