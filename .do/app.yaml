@@ -1,10 +1,18 @@
+---
 name: good-first-issue
 region: fra
 static_sites:
   - dockerfile_path: Dockerfile
+    envs:
+      - key: GITHUB_ACCESS_TOKEN
+        scope: BUILD_TIME
+        type: SECRET
+        value: EV[1:m23srQansJTn1IcpYaKbu52We5paZpHw:u9rp6NEGnwBVh0KFci3PwLrD+UwVCzoXhXdZAbnBC+rx7VEqoAqKrCQvrRMYZHzLFRtz6dsx0Ac=]
     github:
       branch: deploy-to-platform
       deploy_on_push: true
       repo: ocean/good-first-issue
     name: good-first-issue
     output_dir: /public
+    routes:
+      - path: /
