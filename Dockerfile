@@ -2,8 +2,7 @@ FROM python:3.8-alpine as builder
 ARG GITHUB_ACCESS_TOKEN
 WORKDIR /
 COPY . .
-RUN apk update && \
-  apk add nodejs curl build-base python3-dev libffi-dev openssl-dev && \
+RUN apk add --update nodejs npm curl build-base python3-dev libffi-dev openssl-dev && \
   curl -L -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.76.3/hugo_0.76.3_Linux-64bit.tar.gz && \
   tar xzvf hugo.tar.gz && \
   mv hugo /usr/local/bin && \
