@@ -1,4 +1,5 @@
 FROM python:3.8-alpine as builder
+ARG GITHUB_ACCESS_TOKEN
 WORKDIR /
 COPY . .
 RUN apk update && \
